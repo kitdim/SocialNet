@@ -4,15 +4,15 @@
 
   echo "<div class='center'>Добро пожаловать в BASYAKS,";
 
-  if ($loggedin) echo " $user, ты вошел";
-  else           echo 'войди или зарегистрируйся';
+  if ($loggedin) echo " $user, ты зашёл на сайт";
+  else           echo ' войдите или пройдите регистрацию';
 
   echo <<<_END
       </div><br>
     </div>
     <div data-role="footer">
-      <h4>Посмотри на <i><a href='https://cat-bounce.com/'
-      target='_blank'>прыгающих котиков</a></i></h4>
+      <h4>Тут <i><a href='https://github.com/kitdim/Basyaks'
+      target='_blank'> код этого проекта</a></i></h4>
     </div>
   </body>
 </html>

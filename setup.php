@@ -1,11 +1,11 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <title>Настройка базы данных</title>
+    <title>Настройка бд</title>
   </head>
   <body>
 
-    <h3>Настройка началась...</h3>
+    <h3>создание...</h3>
 
 <?php
   require_once 'functions.php';

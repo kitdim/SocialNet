@@ -1,4 +1,4 @@
-<?php
+<?php 
   session_start();
 
 echo <<<_INIT
@@ -7,33 +7,33 @@ echo <<<_INIT
   <head>
     <meta charset='utf-8'>
     <meta name='viewport' content='width=device-width, initial-scale=1'> 
-    <link rel='stylesheet' href='jquery.mobile-1.4.5.min.css>
-    <link rel='stylesheet' href='styles.css' type='text/css'>
-    <script src='javascript.js'></script>
-    <script src='jquery-2.2.4.min.js'></script>
-    <script src='jquery.mobile-1.4.5.min.js'></script>
+    <link rel='stylesheet' href='jquery/jquery.mobile-1.4.5.min.css'>
+    <link rel='stylesheet' href='css/styles.css' type='text/css'>
+    <script src='js/javascript.js'></script>
+    <script src='jquery/jquery-2.2.4.min.js'></script>
+    <script src='jquery/jquery.mobile-1.4.5.min.js'></script>
 
 _INIT;
 
   require_once 'functions.php';
 
-  $userstr = 'Ну здравствуй';
+  $userstr = 'Привет гость';
 
   if (isset($_SESSION['user']))
   {
     $user     = $_SESSION['user'];
     $loggedin = TRUE;
-    $userstr  = "Зашел как: $user";
+    $userstr  = "Зашёл как: $user";
   }
   else $loggedin = FALSE;
 
 echo <<<_MAIN
-    <title>Что стало?: $userstr</title>
+    <title>Basyaks: $userstr</title>
   </head>
   <body>
     <div data-role='page'>
       <div data-role='header'>
-        <div id='logo' class='center'>BASYAKS</div>
+        <div id='logo' class='center'>Basyaks<img id='shark' src='images/shark.gif'></div>
         <div class='username'>$userstr</div>
       </div>
       <div data-role='content'>
@@ -65,13 +65,13 @@ _LOGGEDIN;
 echo <<<_GUEST
         <div class='center'>
           <a data-role='button' data-inline='true' data-icon='home'
-            data-transition='slide' href='index.php'>Home</a>
+            data-transition='slide' href='index.php'>Главная</a>
           <a data-role='button' data-inline='true' data-icon='plus'
-            data-transition="slide" href='signup.php'>Sign Up</a>
+            data-transition="slide" href='signup.php'>Регистрация</a>
           <a data-role='button' data-inline='true' data-icon='check'
-            data-transition="slide" href='login.php'>Log In</a>
+            data-transition="slide" href='login.php'>Войти</a>
         </div>
-        <p class='info'>(Вы должны войти в систему, чтобы использовать это приложение)</p>
+        <p class='info'>(Для входа нужен аккунт, если его нет пройдите регистрацию)</p>
         
 _GUEST;
   }

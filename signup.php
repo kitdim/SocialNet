@@ -39,11 +39,11 @@ _END;
       $result = queryMysql("SELECT * FROM members WHERE user='$user'");
 
       if ($result->num_rows)
-        $error = 'Это имя пользователя уже используется<br><br>';
+        $error = 'Такое логин уже используется<br><br>';
       else
       {
         queryMysql("INSERT INTO members VALUES('$user', '$pass')");
-        die('<h4>Аккаунт создан</h4>Вы можете войти.</div></body></html>');
+        die('<h4>Аккаунт создан.</h4><br>Вы можете войти.</div></body></html>');
       }
     }
   }
@@ -52,7 +52,7 @@ echo <<<_END
       <form method='post' action='signup.php'>$error
       <div data-role='fieldcontain'>
         <label></label>
-        Пожалуйста, введите логин и пароль
+        Для регистрации необходимо ввести логин и пароль
       </div>
       <div data-role='fieldcontain'>
         <label>Логин</label>
@@ -66,7 +66,7 @@ echo <<<_END
       </div>
       <div data-role='fieldcontain'>
         <label></label>
-        <input data-transition='slide' type='submit' value='зарегистрироватся'>
+        <input data-transition='slide' type='submit' value='Зарегистрироваться'>
       </div>
     </div>
   </body>

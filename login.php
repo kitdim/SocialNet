@@ -1,4 +1,4 @@
-<?php // Example 27-7: login.php
+<?php
   require_once 'header.php';
   $error = $user = $pass = "";
 
@@ -16,15 +16,15 @@
 
       if ($result->num_rows == 0)
       {
-        $error = "Неправильные данные";
+        $error = "Данные введены неверно";
       }
       else
       {
         $_SESSION['user'] = $user;
         $_SESSION['pass'] = $pass;
-        die("<div class='center'>Вы вошли в систему,
-             <a data-transition='slide' href='members.php?view=$user'>нажми здесь</a>
-             чтобы продолжить.</div></div></body></html>");
+        die("<div class='center'>Ты уже вошел.
+             <a data-transition='slide' href='members.php?view=$user'>Нажми на меня</a>
+             для продолжения.</div></div></body></html>");
       }
     }
   }
@@ -37,19 +37,19 @@ echo <<<_END
         </div>
         <div data-role='fieldcontain'>
           <label></label>
-          Please enter your details to log in
+          Для входа введите свой логин и пароль
         </div>
         <div data-role='fieldcontain'>
-          <label>Username</label>
+          <label>Логин</label>
           <input type='text' maxlength='16' name='user' value='$user'>
         </div>
         <div data-role='fieldcontain'>
-          <label>Password</label>
+          <label>Пароль</label>
           <input type='password' maxlength='16' name='pass' value='$pass'>
         </div>
         <div data-role='fieldcontain'>
           <label></label>
-          <input data-transition='slide' type='submit' value='Login'>
+          <input data-transition='slide' type='submit' value='Войти'>
         </div>
       </form>
     </div>
