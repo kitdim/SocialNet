@@ -45,17 +45,17 @@ _MAIN;
 echo <<<_LOGGEDIN
         <div class='center'>
           <a data-role='button' data-inline='true' data-icon='home'
-            data-transition="slide" href='members.php?view=$user'>Home</a>
+            data-transition="slide" href='members.php?view=$user'>Главная</a>
           <a data-role='button' data-inline='true' data-icon='user'
-            data-transition="slide" href='members.php'>Members</a>
+            data-transition="slide" href='members.php'>Участники</a>
           <a data-role='button' data-inline='true' data-icon='heart'
-            data-transition="slide" href='friends.php'>Friends</a><br>
+            data-transition="slide" href='friends.php'>Друзья</a><br>
           <a data-role='button' data-inline='true' data-icon='mail'
-            data-transition="slide" href='messages.php'>Messages</a>
+            data-transition="slide" href='messages.php'>Сообщения</a>
           <a data-role='button' data-inline='true' data-icon='edit'
-            data-transition="slide" href='profile.php'>Edit Profile</a>
+            data-transition="slide" href='profile.php'>Изменить профиль</a>
           <a data-role='button' data-inline='true' data-icon='action'
-            data-transition="slide" href='logout.php'>Log out</a>
+            data-transition="slide" href='logout.php'>Выйти</a>
         </div>
         
 _LOGGEDIN;
